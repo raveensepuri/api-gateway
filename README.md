@@ -215,7 +215,7 @@ This script:
 set -e
 
 echo "=================================================="
-echo "🚀 RABBITMQ FULL DEMO STARTING"
+echo "🚀 RABBITMQ FULL API-GATEWAY STARTING"
 echo "=================================================="
 
 # Move to project directory
@@ -250,7 +250,7 @@ echo "=================================================="
 python3 client.py
 
 echo "=================================================="
-echo "🟢 DEMO COMPLETE"
+echo "🟢 API-GATEWAY COMPLETE"
 echo "=================================================="
 
 echo "Stopping services..."
@@ -294,7 +294,7 @@ Message acknowledged
 
 ---
 
-### Terminal 2 (Demo Script)
+### Terminal 2 (Script)
 
 ```
 CLIENT STARTING
@@ -323,7 +323,7 @@ STEP 3: Message successfully queued
 
 ---
 
-# 🟢 7. What This Demo Demonstrates
+# 🟢 7. What This Demonstrates
 
 ✔ REST → Message Queue
 ✔ Producer decoupling
@@ -355,17 +355,17 @@ Worker Consumer
 
 ---
 
-# DEMO complete execution log
+# API-GATEWAY complete execution log
 
 ```
 $:~/api-gateway$ ./api-gateway.sh
 ==================================================
-🚀 RABBITMQ DEMO
+🚀 RABBITMQ API-GATEWAY
 ==================================================
-DEMO: 🔧 Checking Python dependencies...
-DEMO: ✅ Dependencies verified
-DEMO: 🧹 Cleaning previous processes...
-DEMO: 🗑 Removing old queue (if exists)...
+API-GATEWAY: 🔧 Checking Python dependencies...
+API-GATEWAY: ✅ Dependencies verified
+API-GATEWAY: 🧹 Cleaning previous processes...
+API-GATEWAY: 🗑 Removing old queue (if exists)...
 [sudo] password for admin:
 Deleting queue 'task_queue' on vhost '/' ...
 Error:
@@ -410,15 +410,15 @@ WORKER: 🟢 Processing complete
 WORKER: 🟢 Message acknowledged
 --------------------------------------------------
 ==================================================
-🟢 DEMO COMPLETE
+🟢 API-GATEWAY COMPLETE
 ==================================================
-DEMO: Stopping services...
+API-GATEWAY: Stopping services...
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
 INFO:     Finished server process [120723]
-DEMO: 🗑 cleanup queue ...
+API-GATEWAY: 🗑 cleanup queue ...
 Deleting queue 'task_queue' on vhost '/' ...
 Queue was successfully deleted with 0 ready messages
-DEMO: 🎉 All processes terminated cleanly.
+API-GATEWAY: 🎉 All processes terminated cleanly.
 ```
